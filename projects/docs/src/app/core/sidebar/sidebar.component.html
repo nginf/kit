@@ -1,0 +1,5 @@
+<nav class="w-[250px] px-3 border-r border-solid border-stone-300 h-screen">
+  @for (group of sidebar.groups; track $index) {
+    <app-sidebar-group [group]="group"></app-sidebar-group>
+  }
+</nav>

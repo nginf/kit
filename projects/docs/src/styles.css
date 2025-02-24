@@ -4,3 +4,7 @@
 @theme {
   --font-sans: 'Open Sans', serif;
 }
+
+:root {
+  color: var(--color-stone-950);
+}

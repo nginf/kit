@@ -1,0 +1,11 @@
+@let _group = group();
+<div class="mb-6">
+  <p class="mb-2">{{ _group.name }}</p>
+  <ul>
+    @for (link of _group.links; track $index) {
+      <li>
+        <app-sidebar-link [link]="link"></app-sidebar-link>
+      </li>
+    }
+  </ul>
+</div>
