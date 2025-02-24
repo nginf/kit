@@ -1,0 +1,14 @@
+<h1 class="text-7xl pt-3 mb-6">{{ label() }}</h1>
+<div class="flex">
+  @for (tab of tabs; track $index) {
+    <button
+      class="uppercase px-3 py-2 border-b-transparent border-b-[2px] cursor-pointer"
+      [class.active]="tab === activeTab()"
+      (click)="selectTab(tab)"
+    >
+      {{ tab }}
+    </button>
+  }
+</div>
+
+<app-doc-api-section [apiSection]="apiSection()"></app-doc-api-section>

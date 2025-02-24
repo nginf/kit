@@ -1,10 +1,84 @@
 /* You can add global styles to this file, and also import other style files */
 @import 'tailwindcss';
+@import 'highlight.js/styles/github.css';
 
 @theme {
-  --font-sans: 'Open Sans', serif;
+  --font-sans: 'Roboto', serif;
+  --color-background: white;
+  --color-foreground: var(--color-stone-950);
+  --color-primary: var(--color-stone-900);
+  --color-primary-foreground: var(white);
+  --color-divider: var(--color-stone-300);
+}
+
+@layer components {
+  .api-table {
+    table-layout: auto;
+    td,
+    th {
+      border-bottom: 1px solid var(--color-divider);
+    }
+    th,
+    td {
+      padding: 10px 20px;
+    }
+  }
 }
 
 :root {
   color: var(--color-stone-950);
 }
+
+/*
+:root {
+  --nv-background: white;
+  --nv-foreground: #030712;
+  --nv-border-radius: 6px;
+  --nv-primary: #2563eb;
+  --nv-primary-foreground: white;
+
+  --nv-inverse: #1f2937;
+  --nv-inverse-foreground: white;
+
+  --nv-secondary: #4b5563;
+  --nv-secondary-foreground: white;
+
+  --nv-accent: #f3f4f6;
+  --nv-accent-foreground: #111827;
+
+  --nv-danger: #dc2626;
+  --nv-danger-foreground: white;
+
+  --nv-warning: #ea580c;
+  --nv-warning-foreground: white;
+
+  --nv-success: #16a34a;
+  --nv-success-foreground: white;
+
+  --nv-disabled: #f9fafb;
+  --nv-disabled-foreground: #9ca3af;
+
+  --nv-surface: #f9fafb;
+
+  --nv-surface-2: #d1d5db;
+
+  // Overlay commonly used with opacity, so it needs to be a tuple in order to work
+  --nv-overlay: 0, 0, 0;
+
+  --nv-divider: #cbd5e1;
+  --nv-border-color: #d1d5db;
+  --nv-border: 1px solid var(--nv-border-color);
+
+  --nv-ring: #9ca3af;
+
+  --nv-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1),
+    0 4px 6px -4px rgb(0 0 0 / 0.1), 0 10px 15px -3px rgb(0 0 0 / 0.1),
+    0 4px 6px -4px rgb(0 0 0 / 0.1);
+
+  --nv-mute-start: #e0e0e0;
+  --nv-mute-end: #f0f0f0;
+
+  .cdk-overlay-backdrop {
+    background: rgba(var(--nv-overlay), 0.3);
+  }
+} */

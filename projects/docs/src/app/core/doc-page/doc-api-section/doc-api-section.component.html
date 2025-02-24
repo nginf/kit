@@ -1,0 +1,17 @@
+@for (directive of apiSection().directives; track $index) {
+  <h2 class="border-b border-divider text-4xl my-10 pb-2">Directives</h2>
+  <div class="flex items-center gap-2">
+    <h3 class="text-3xl">{{ directive.name }}</h3>
+    <p class="rounded-2xl px-2 py-1 bg-green-600 text-white text-sm">
+      {{ directive.selector }}
+    </p>
+  </div>
+  <p [innerHTML]="directive.descritpion"></p>
+
+  @if (directive.inputs) {
+    <app-doc-api-inputs [apiInputs]="directive.inputs"></app-doc-api-inputs>
+  }
+  @if (directive.outputs) {
+    <app-doc-api-outputs [apiOutputs]="directive.outputs"></app-doc-api-outputs>
+  }
+}

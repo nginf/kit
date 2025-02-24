@@ -14,6 +14,15 @@ export const routes: Routes = [
       import('./pages/docs-container-page/docs-container-page.component').then(
         (h) => h.DocsContainerPageComponent
       ),
+    children: [
+      {
+        path: 'outside-click',
+        loadComponent: () =>
+          import(
+            './pages/outside-click-page/outside-click-page.component'
+          ).then((h) => h.OutsideClickPageComponent),
+      },
+    ],
   },
   {
     path: '',

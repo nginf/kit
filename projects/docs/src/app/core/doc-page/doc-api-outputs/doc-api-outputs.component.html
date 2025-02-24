@@ -1,0 +1,19 @@
+<table class="api-table">
+  <thead>
+    <tr>
+      <th class="text-left">Name</th>
+      <th class="text-left">description</th>
+    </tr>
+  </thead>
+  <tbody>
+    @for (input of apiOutputs(); track $index) {
+      <tr>
+        <td>
+          <span class="relative mr-2">{{ input.name }} </span>
+          ({{ input.type }})
+        </td>
+        <td [innerHTML]="input.description"></td>
+      </tr>
+    }
+  </tbody>
+</table>
