@@ -8,9 +8,7 @@
     "noImplicitOverride": true,
     "noPropertyAccessFromIndexSignature": true,
     "paths": {
-      "kit": [
-        "./dist/kit"
-      ]
+      "kit": ["./dist/kit"]
     },
     "noImplicitReturns": true,
     "noFallthroughCasesInSwitch": true,
@@ -27,6 +25,11 @@
     "enableI18nLegacyMessageIdFormat": false,
     "strictInjectionParameters": true,
     "strictInputAccessModifiers": true,
-    "strictTemplates": true
+    "strictTemplates": true,
+    "extendedDiagnostics": {
+      "checks": {
+        "unusedStandaloneImports": "error"
+      }
+    }
   }
 }

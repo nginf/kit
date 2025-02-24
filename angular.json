@@ -28,9 +28,7 @@
                 "input": "projects/docs/public"
               }
             ],
-            "styles": [
-              "projects/docs/src/styles.css"
-            ],
+            "styles": ["projects/docs/src/styles.css"],
             "scripts": [],
             "server": "projects/docs/src/main.server.ts",
             "prerender": true,
@@ -87,10 +85,18 @@
                 "input": "projects/docs/public"
               }
             ],
-            "styles": [
-              "projects/docs/src/styles.css"
-            ],
+            "styles": ["projects/docs/src/styles.css"],
             "scripts": []
+          }
+        },
+        "lint": {
+          "builder": "@angular-eslint/builder:lint",
+          "options": {
+            "lintFilePatterns": [
+              "projects/docs/**/*.ts",
+              "projects/docs/**/*.html"
+            ],
+            "eslintConfig": "projects/docs/eslint.config.js"
           }
         }
       }
@@ -99,7 +105,7 @@
       "projectType": "library",
       "root": "projects/kit",
       "sourceRoot": "projects/kit/src",
-      "prefix": "lib",
+      "prefix": "kt",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:ng-packagr",
@@ -120,6 +126,16 @@
           "builder": "@angular-devkit/build-angular:karma",
           "options": {
             "tsConfig": "projects/kit/tsconfig.spec.json"
+          }
+        },
+        "lint": {
+          "builder": "@angular-eslint/builder:lint",
+          "options": {
+            "lintFilePatterns": [
+              "projects/kit/**/*.ts",
+              "projects/kit/**/*.html"
+            ],
+            "eslintConfig": "projects/kit/eslint.config.js"
           }
         }
       }
