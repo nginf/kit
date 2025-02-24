@@ -23,23 +23,6 @@ module.exports = tseslint.config(
           style: 'kebab-case',
         },
       ],
-      '@typescript-eslint/naming-convention': [
-        'error',
-        {
-          selector: 'class',
-          format: ['PascalCase'],
-          prefix: ['kt'],
-        },
-        {
-          selector: 'function',
-          format: ['camelCase', 'PascalCase'],
-          prefix: ['kt'],
-          filter: {
-            regex: '^_',
-            match: false,
-          },
-        },
-      ],
     },
   },
   {

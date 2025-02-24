@@ -1,5 +1,6 @@
 /* You can add global styles to this file, and also import other style files */
 @import 'tailwindcss';
+@plugin "@tailwindcss/typography";
 @import 'highlight.js/styles/github.css';
 
 @theme {
@@ -9,20 +10,6 @@
   --color-primary: var(--color-stone-900);
   --color-primary-foreground: var(white);
   --color-divider: var(--color-stone-300);
-}
-
-@layer components {
-  .api-table {
-    table-layout: auto;
-    td,
-    th {
-      border-bottom: 1px solid var(--color-divider);
-    }
-    th,
-    td {
-      padding: 10px 20px;
-    }
-  }
 }
 
 :root {

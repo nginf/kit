@@ -25,6 +25,11 @@
             "assets": [
               {
                 "glob": "**/*",
+                "input": "projects/docs/src/app/examples",
+                "output": "examples"
+              },
+              {
+                "glob": "**/*",
                 "input": "projects/docs/public"
               }
             ],

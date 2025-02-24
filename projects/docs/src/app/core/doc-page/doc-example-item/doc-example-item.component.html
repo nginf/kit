@@ -1,0 +1,11 @@
+<div>
+  @for (tab of tabs; track $index) {
+    <button (click)="tabChange(tab)">{{ tab }}</button>
+  }
+</div>
+
+@switch (activeTab()) {
+  @case ('PREVIEW') {
+    <ng-content> </ng-content>
+  }
+}

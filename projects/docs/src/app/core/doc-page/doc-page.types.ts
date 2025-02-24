@@ -5,7 +5,7 @@ export interface ApiSection {
 export interface ApiDirectiveSection {
   name: string;
   selector: string;
-  descritpion: string;
+  description: string;
   inputs?: ApiInput[];
   outputs?: ApiOutput[];
   methods?: ApiMethod[];
@@ -15,7 +15,7 @@ export interface ApiInput {
   name: string;
   type: string;
   description: string;
-  default: unknown;
+  default?: unknown;
   required?: boolean;
 }
 
@@ -30,3 +30,5 @@ export interface ApiMethod {
   description: string;
   returnType: string;
 }
+
+export const API_EMPTY_DEFAULT_VALUE = '-';

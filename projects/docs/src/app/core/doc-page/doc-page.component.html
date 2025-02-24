@@ -11,4 +11,18 @@
   }
 </div>
 
-<app-doc-api-section [apiSection]="apiSection()"></app-doc-api-section>
+@switch (activeTab()) {
+  @case ('Overview') {
+    <ng-content select="app-doc-overview-section"></ng-content>
+  }
+  @case ('API') {
+    <app-doc-api-section [apiSection]="apiSection()"></app-doc-api-section>
+  }
+  @default {
+    <ng-content select="app-doc-examples-section"></ng-content>
+  }
+}
+
+<!-- <app-doc-api-section [apiSection]="apiSection()"></app-doc-api-section> -->
+
+<!-- <ng-content select="app-doc-show-case"></ng-content> -->

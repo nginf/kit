@@ -1,7 +1,10 @@
+<h4>Inputs</h4>
 <table class="api-table">
   <thead>
     <tr>
       <th class="text-left">Name</th>
+      <th>Type</th>
+      <th>Default</th>
       <th class="text-left">description</th>
     </tr>
   </thead>
@@ -12,14 +15,12 @@
           <span class="relative mr-2"
             >{{ input.name }}
             @if (input.required) {
-              <span class="text-red-500 absolute -right-1 -top-2">*</span>
+              <span class="text-red-500 absolute -right-2 -top-2">*</span>
             }
           </span>
-          ({{ input.type }})
-          @if (input.default !== undefined) {
-            (def: {{ input.default }})
-          }
         </td>
+        <td>{{ input.type }}</td>
+        <td>{{ input.default ?? '--' }}</td>
         <td [innerHTML]="input.description"></td>
       </tr>
     }

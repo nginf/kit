@@ -1,3 +1,4 @@
+import { provideHttpClient, withFetch } from '@angular/common/http';
 import {
   ApplicationConfig,
   provideExperimentalZonelessChangeDetection,
@@ -14,6 +15,7 @@ export const appConfig: ApplicationConfig = {
   providers: [
     provideExperimentalZonelessChangeDetection(),
     provideRouter(routes),
+    provideHttpClient(withFetch()),
     provideClientHydration(withEventReplay()),
     provideHighlightOptions({
       fullLibraryLoader: () => import('highlight.js'),

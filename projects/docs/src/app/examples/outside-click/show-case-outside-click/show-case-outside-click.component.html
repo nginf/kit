@@ -1,0 +1,11 @@
+<div
+  class="flex h-[200px] w-[200px] border border-solid border-black items-center justify-center"
+>
+  <div
+    (ktOutsideClick)="clicked()"
+    [disableOutsideClick]="true"
+    class="border border-dashed border-black"
+  >
+    Inner content
+  </div>
+</div>

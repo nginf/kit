@@ -1,7 +1,9 @@
-<table class="api-table">
+<h4>Outputs</h4>
+<table>
   <thead>
     <tr>
       <th class="text-left">Name</th>
+      <th>type</th>
       <th class="text-left">description</th>
     </tr>
   </thead>
@@ -10,8 +12,8 @@
       <tr>
         <td>
           <span class="relative mr-2">{{ input.name }} </span>
-          ({{ input.type }})
         </td>
+        <td>({{ input.type }})</td>
         <td [innerHTML]="input.description"></td>
       </tr>
     }

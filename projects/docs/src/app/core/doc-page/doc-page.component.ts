@@ -16,7 +16,7 @@ import { ApiSection } from './doc-page.types';
 })
 export class DocPageComponent {
   tabs = ['Overview', 'API', 'Examples'];
-  activeTab = signal<string>('Overview');
+  activeTab = signal<string>(this.tabs[2]);
   label = input.required<string>();
 
   apiSection = input.required<ApiSection>();
