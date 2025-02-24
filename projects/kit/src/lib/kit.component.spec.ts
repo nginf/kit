@@ -1,5 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
+import { provideExperimentalZonelessChangeDetection } from '@angular/core';
 import { KitComponent } from './kit.component';
 
 describe('KitComponent', () => {
@@ -8,9 +9,9 @@ describe('KitComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [KitComponent]
-    })
-    .compileComponents();
+      imports: [KitComponent],
+      providers: [provideExperimentalZonelessChangeDetection()],
+    }).compileComponents();
 
     fixture = TestBed.createComponent(KitComponent);
     component = fixture.componentInstance;

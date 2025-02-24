@@ -8,9 +8,7 @@
     "noImplicitOverride": true,
     "noPropertyAccessFromIndexSignature": true,
     "paths": {
-      "kit": [
-        "./dist/kit"
-      ]
+      "kit": ["./dist/kit"]
     },
     "noImplicitReturns": true,
     "noFallthroughCasesInSwitch": true,
