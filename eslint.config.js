@@ -30,6 +30,27 @@ module.exports = tseslint.config(
           style: 'kebab-case',
         },
       ],
+      '@angular-eslint/prefer-on-push-component-change-detection': ['error'],
+      '@typescript-eslint/member-ordering': [
+        'error',
+        {
+          default: [
+            // Then other fields
+            'public-static-field',
+            'protected-static-field',
+            'private-static-field',
+            'public-instance-field',
+            'protected-instance-field',
+            'private-instance-field',
+            // Constructor comes after fields
+            'constructor',
+            // Then methods
+            'public-instance-method',
+            'protected-instance-method',
+            'private-instance-method',
+          ],
+        },
+      ],
     },
   },
   {
