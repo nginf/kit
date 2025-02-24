@@ -1,9 +1,9 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'lib-kit',
+  selector: 'kt-kit',
   imports: [],
   template: ` <p>kit works!</p> `,
   styles: ``,
 })
-export class KitComponent {}
+export class ktComponent {}
