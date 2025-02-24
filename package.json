@@ -11,7 +11,9 @@
     "format:check": "prettier --check .",
     "format:write": "prettier --write .",
     "prepare": "husky",
-    "lint": "ng lint"
+    "lint": "ng lint",
+    "check:docs": "ng lint docs && npm run format:check && ng build --project=docs",
+    "check:kit": "ng lint kit && npm run format:check && ng test --no-watch --no-progress --browsers=ChromeHeadless --project=kit && ng build --project=kit"
   },
   "lint-staged": {
     "**/*.{html,ts,json,css,scss,md}": "npm run format:write"
